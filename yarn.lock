@@ -51,21 +51,11 @@
   dependencies:
     "@opentelemetry/context-base" "^0.16.0"
 
-"@opentelemetry/api@^0.6.1":
-  version "0.6.1"
-  resolved "https://registry.npmjs.org/@opentelemetry/api/-/api-0.6.1.tgz"
-  dependencies:
-    "@opentelemetry/context-base" "^0.6.1"
-
 "@opentelemetry/api@^0.8.3":
   version "0.8.3"
   resolved "https://registry.npmjs.org/@opentelemetry/api/-/api-0.8.3.tgz"
   dependencies:
     "@opentelemetry/context-base" "^0.8.3"
-
-"@opentelemetry/base@^0.6.1":
-  version "0.6.1"
-  resolved "https://registry.npmjs.org/@opentelemetry/base/-/base-0.6.1.tgz"
 
 "@opentelemetry/context-base@^0.15.0":
   version "0.15.0"
@@ -74,10 +64,6 @@
 "@opentelemetry/context-base@^0.16.0":
   version "0.16.0"
   resolved "https://registry.yarnpkg.com/@opentelemetry/context-base/-/context-base-0.16.0.tgz#f41ca27221f31247e8bccfdde87a5cbfd9b57679"
-
-"@opentelemetry/context-base@^0.6.1":
-  version "0.6.1"
-  resolved "https://registry.npmjs.org/@opentelemetry/context-base/-/context-base-0.6.1.tgz"
 
 "@opentelemetry/context-base@^0.8.3":
   version "0.8.3"
@@ -97,14 +83,6 @@
   dependencies:
     "@opentelemetry/api" "^0.16.0"
     "@opentelemetry/context-base" "^0.16.0"
-    semver "^7.1.3"
-
-"@opentelemetry/core@^0.6.1":
-  version "0.6.1"
-  resolved "https://registry.npmjs.org/@opentelemetry/core/-/core-0.6.1.tgz"
-  dependencies:
-    "@opentelemetry/api" "^0.6.1"
-    "@opentelemetry/context-base" "^0.6.1"
     semver "^7.1.3"
 
 "@opentelemetry/core@^0.8.3":
@@ -157,13 +135,13 @@
     "@opentelemetry/tracing" "^0.15.0"
     "@opentelemetry/web" "^0.15.0"
 
-"@opentelemetry/plugin-user-interaction@^0.6.1":
-  version "0.6.1"
-  resolved "https://registry.npmjs.org/@opentelemetry/plugin-user-interaction/-/plugin-user-interaction-0.6.1.tgz"
+"@opentelemetry/plugin-user-interaction@^0.13.0":
+  version "0.13.0"
+  resolved "https://registry.yarnpkg.com/@opentelemetry/plugin-user-interaction/-/plugin-user-interaction-0.13.0.tgz#15f7e2be4da2b03ef4c126b3780e747152260b5f"
   dependencies:
-    "@opentelemetry/api" "^0.6.1"
-    "@opentelemetry/core" "^0.6.1"
-    "@opentelemetry/web" "^0.6.1"
+    "@opentelemetry/api" "^0.15.0"
+    "@opentelemetry/core" "^0.15.0"
+    "@opentelemetry/web" "^0.15.0"
     shimmer "^1.2.1"
 
 "@opentelemetry/resources@^0.15.0":
@@ -179,13 +157,6 @@
   dependencies:
     "@opentelemetry/api" "^0.16.0"
     "@opentelemetry/core" "^0.16.0"
-
-"@opentelemetry/resources@^0.6.1":
-  version "0.6.1"
-  resolved "https://registry.npmjs.org/@opentelemetry/resources/-/resources-0.6.1.tgz"
-  dependencies:
-    "@opentelemetry/api" "^0.6.1"
-    "@opentelemetry/base" "^0.6.1"
 
 "@opentelemetry/resources@^0.8.3":
   version "0.8.3"
@@ -225,16 +196,6 @@
     "@opentelemetry/semantic-conventions" "^0.16.0"
     lodash.merge "^4.6.2"
 
-"@opentelemetry/tracing@^0.6.1":
-  version "0.6.1"
-  resolved "https://registry.npmjs.org/@opentelemetry/tracing/-/tracing-0.6.1.tgz"
-  dependencies:
-    "@opentelemetry/api" "^0.6.1"
-    "@opentelemetry/base" "^0.6.1"
-    "@opentelemetry/context-base" "^0.6.1"
-    "@opentelemetry/core" "^0.6.1"
-    "@opentelemetry/resources" "^0.6.1"
-
 "@opentelemetry/tracing@^0.8.3":
   version "0.8.3"
   resolved "https://registry.npmjs.org/@opentelemetry/tracing/-/tracing-0.8.3.tgz"
@@ -265,15 +226,6 @@
     "@opentelemetry/instrumentation" "^0.16.0"
     "@opentelemetry/semantic-conventions" "^0.16.0"
     "@opentelemetry/tracing" "^0.16.0"
-
-"@opentelemetry/web@^0.6.1":
-  version "0.6.1"
-  resolved "https://registry.npmjs.org/@opentelemetry/web/-/web-0.6.1.tgz"
-  dependencies:
-    "@opentelemetry/api" "^0.6.1"
-    "@opentelemetry/context-base" "^0.6.1"
-    "@opentelemetry/core" "^0.6.1"
-    "@opentelemetry/tracing" "^0.6.1"
 
 "@protobufjs/aspromise@^1.1.1", "@protobufjs/aspromise@^1.1.2":
   version "1.1.2"
