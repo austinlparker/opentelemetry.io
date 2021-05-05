@@ -18,5 +18,4 @@ module.exports = {
     ],
     extensions: ['.ts', '.js']
   },
-  devtool: 'none'
 }
