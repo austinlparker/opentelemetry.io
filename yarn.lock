@@ -28,6 +28,10 @@
   version "0.19.0"
   resolved "https://registry.yarnpkg.com/@opentelemetry/api-metrics/-/api-metrics-0.19.0.tgz#3b5944ce86f4551cbff1afdc1d064adf18a2db68"
 
+"@opentelemetry/api-metrics@0.20.0":
+  version "0.20.0"
+  resolved "https://registry.yarnpkg.com/@opentelemetry/api-metrics/-/api-metrics-0.20.0.tgz#5c332cadfacd1fa966318292ba8dbb542f5ead57"
+
 "@opentelemetry/api-metrics@^0.18.2":
   version "0.18.2"
   resolved "https://registry.yarnpkg.com/@opentelemetry/api-metrics/-/api-metrics-0.18.2.tgz#12ad987cb785e142508e6df3772b8908f2edd8de"
@@ -38,6 +42,10 @@
   version "0.18.1"
   resolved "https://registry.yarnpkg.com/@opentelemetry/api/-/api-0.18.1.tgz#fb499e07afa1f55acffc47b2469eb218dcdee2a2"
 
+"@opentelemetry/api@^0.20.0":
+  version "0.20.0"
+  resolved "https://registry.yarnpkg.com/@opentelemetry/api/-/api-0.20.0.tgz#d4e26d30dc0c5da697d1ff51434ad8f0cf30e565"
+
 "@opentelemetry/api@^1.0.0-rc.0":
   version "1.0.0-rc.0"
   resolved "https://registry.yarnpkg.com/@opentelemetry/api/-/api-1.0.0-rc.0.tgz#0c7c3f5e1285f99cedb563d74ad1adb9822b5144"
@@ -46,6 +54,13 @@
   version "0.19.0"
   resolved "https://registry.yarnpkg.com/@opentelemetry/core/-/core-0.19.0.tgz#5018e16d1d3081da0657476e58d9c2dce7c511a2"
   dependencies:
+    semver "^7.1.3"
+
+"@opentelemetry/core@0.20.0", "@opentelemetry/core@^0.20.0":
+  version "0.20.0"
+  resolved "https://registry.yarnpkg.com/@opentelemetry/core/-/core-0.20.0.tgz#2fc9619fa225c7ea7a6169ac578f89c9894b5900"
+  dependencies:
+    "@opentelemetry/semantic-conventions" "0.20.0"
     semver "^7.1.3"
 
 "@opentelemetry/core@^0.18.2":
@@ -66,16 +81,16 @@
     "@opentelemetry/resources" "^0.18.2"
     "@opentelemetry/tracing" "^0.18.2"
 
-"@opentelemetry/instrumentation-document-load@^0.16.0":
-  version "0.16.0"
-  resolved "https://registry.yarnpkg.com/@opentelemetry/instrumentation-document-load/-/instrumentation-document-load-0.16.0.tgz#c2499daec856ceb768ca255ff1506f30c240ff8b"
+"@opentelemetry/instrumentation-document-load@^0.20.0":
+  version "0.20.0"
+  resolved "https://registry.yarnpkg.com/@opentelemetry/instrumentation-document-load/-/instrumentation-document-load-0.20.0.tgz#c8b1bfad907a773361e422612e6ec2e06e77f22a"
   dependencies:
-    "@opentelemetry/api" "^1.0.0-rc.0"
-    "@opentelemetry/core" "^0.19.0"
-    "@opentelemetry/instrumentation" "^0.19.0"
-    "@opentelemetry/semantic-conventions" "^0.19.0"
-    "@opentelemetry/tracing" "^0.19.0"
-    "@opentelemetry/web" "^0.19.0"
+    "@opentelemetry/api" "^0.20.0"
+    "@opentelemetry/core" "^0.20.0"
+    "@opentelemetry/instrumentation" "^0.20.0"
+    "@opentelemetry/semantic-conventions" "^0.20.0"
+    "@opentelemetry/tracing" "^0.20.0"
+    "@opentelemetry/web" "^0.20.0"
 
 "@opentelemetry/instrumentation-user-interaction@^0.16.0":
   version "0.16.0"
@@ -105,6 +120,15 @@
     semver "^7.3.2"
     shimmer "^1.2.1"
 
+"@opentelemetry/instrumentation@^0.20.0":
+  version "0.20.0"
+  resolved "https://registry.yarnpkg.com/@opentelemetry/instrumentation/-/instrumentation-0.20.0.tgz#f0c44a79d00a1dc515b037e31e813f4458d72029"
+  dependencies:
+    "@opentelemetry/api-metrics" "0.20.0"
+    require-in-the-middle "^5.0.3"
+    semver "^7.3.2"
+    shimmer "^1.2.1"
+
 "@opentelemetry/metrics@^0.18.2":
   version "0.18.2"
   resolved "https://registry.yarnpkg.com/@opentelemetry/metrics/-/metrics-0.18.2.tgz#4541f54399ba37bff3573f7ed31074ba8bb41a5b"
@@ -121,6 +145,13 @@
   dependencies:
     "@opentelemetry/core" "0.19.0"
 
+"@opentelemetry/resources@0.20.0":
+  version "0.20.0"
+  resolved "https://registry.yarnpkg.com/@opentelemetry/resources/-/resources-0.20.0.tgz#038d985c610600cde146ee1e95b6a124f3ad4754"
+  dependencies:
+    "@opentelemetry/core" "0.20.0"
+    "@opentelemetry/semantic-conventions" "0.20.0"
+
 "@opentelemetry/resources@^0.18.2":
   version "0.18.2"
   resolved "https://registry.yarnpkg.com/@opentelemetry/resources/-/resources-0.18.2.tgz#9d671476a53385c5a75c6ef273a609c9f01d8142"
@@ -128,21 +159,34 @@
     "@opentelemetry/api" "^0.18.1"
     "@opentelemetry/core" "^0.18.2"
 
-"@opentelemetry/semantic-conventions@0.19.0", "@opentelemetry/semantic-conventions@^0.19.0":
+"@opentelemetry/semantic-conventions@0.19.0":
   version "0.19.0"
   resolved "https://registry.yarnpkg.com/@opentelemetry/semantic-conventions/-/semantic-conventions-0.19.0.tgz#3e49b45b52426c62740a24fcf5818cb690b446ef"
+
+"@opentelemetry/semantic-conventions@0.20.0", "@opentelemetry/semantic-conventions@^0.20.0":
+  version "0.20.0"
+  resolved "https://registry.yarnpkg.com/@opentelemetry/semantic-conventions/-/semantic-conventions-0.20.0.tgz#adc7e391bba6db9bbaba04ae263c3e92b1703d44"
 
 "@opentelemetry/semantic-conventions@^0.18.2":
   version "0.18.2"
   resolved "https://registry.yarnpkg.com/@opentelemetry/semantic-conventions/-/semantic-conventions-0.18.2.tgz#a0f15d2ef752567713c1f59f69c6742edb03030c"
 
-"@opentelemetry/tracing@0.19.0", "@opentelemetry/tracing@^0.19.0":
+"@opentelemetry/tracing@0.19.0":
   version "0.19.0"
   resolved "https://registry.yarnpkg.com/@opentelemetry/tracing/-/tracing-0.19.0.tgz#8c94cf2b6d2542d8866a98631825965f5dbce5c4"
   dependencies:
     "@opentelemetry/core" "0.19.0"
     "@opentelemetry/resources" "0.19.0"
     "@opentelemetry/semantic-conventions" "0.19.0"
+    lodash.merge "^4.6.2"
+
+"@opentelemetry/tracing@0.20.0", "@opentelemetry/tracing@^0.20.0":
+  version "0.20.0"
+  resolved "https://registry.yarnpkg.com/@opentelemetry/tracing/-/tracing-0.20.0.tgz#ff0224568925158244926661b339c0ac63a729ba"
+  dependencies:
+    "@opentelemetry/core" "0.20.0"
+    "@opentelemetry/resources" "0.20.0"
+    "@opentelemetry/semantic-conventions" "0.20.0"
     lodash.merge "^4.6.2"
 
 "@opentelemetry/tracing@^0.18.2":
@@ -171,6 +215,14 @@
     "@opentelemetry/core" "0.19.0"
     "@opentelemetry/semantic-conventions" "0.19.0"
     "@opentelemetry/tracing" "0.19.0"
+
+"@opentelemetry/web@^0.20.0":
+  version "0.20.0"
+  resolved "https://registry.yarnpkg.com/@opentelemetry/web/-/web-0.20.0.tgz#e0e090f0dcd35ebaa068c2e98f1b69d1a4aacfce"
+  dependencies:
+    "@opentelemetry/core" "0.20.0"
+    "@opentelemetry/semantic-conventions" "0.20.0"
+    "@opentelemetry/tracing" "0.20.0"
 
 "@types/color-name@^1.1.1":
   version "1.1.1"
