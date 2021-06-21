@@ -421,9 +421,9 @@ buffer-from@^1.0.0:
   version "1.1.1"
   resolved "https://registry.npmjs.org/buffer-from/-/buffer-from-1.1.1.tgz"
 
-bulma@^0.9.2:
-  version "0.9.2"
-  resolved "https://registry.npmjs.org/bulma/-/bulma-0.9.2.tgz"
+bulma@^0.9.3:
+  version "0.9.3"
+  resolved "https://registry.yarnpkg.com/bulma/-/bulma-0.9.3.tgz#ddccb7436ebe3e21bf47afe01d3c43a296b70243"
 
 caller-callsite@^2.0.0:
   version "2.0.0"
