@@ -2,10 +2,9 @@
 title: The Humans of OpenTelemetry
 linkTitle: Humans of OTel
 date: 2023-12-22
-author: >-
-  [Adriana Villela](https://github.com/avillela) (Lightstep),
+author: '[Adriana Villela](https://github.com/avillela) (Lightstep)'
 # prettier-ignore
-cSpell:ignore: ADIANA ALEX Alex ARONOFF Aronoff BOGDAN Bogdan BOTEN Boten CARAMANOLIS Caramanolis CONSTANCE Constance Dapr DRUTU Drutu JACOB Jacob JURACI KANAL Kanal KRÖHLING PAIXĀO Paixāo PURVI Purvi TYLER Tyler utopic VILLELA YAHN Yahn youtube
+cSpell:ignore: adiana alex aronoff bogdan boten caramanolis constance dapr drutu jacob juraci kanal kröhling paixāo purvi tyler utopic villela yahn youtube
 ---
 
 What a year it has been for OpenTelemetry!
@@ -181,7 +180,7 @@ together.
 
 And in order to use all of these tools together, you need to have the data
 coming in, the telemetry actually be integrated, so you can't have three
-separate streams of telemetry. And then on the back-end, be like, I want to
+separate streams of telemetry. And then on the backend, be like, I want to
 cross-reference. All of that telemetry has to be organized into an actual graph.
 You need a graphical data structure that all these individual signals are a part
 of. For me, that is what modern Observability is all about.
@@ -391,10 +390,11 @@ has just been something that I've never done in the past. I've never worked in
 an open source project where so many vendors are involved and so many end user
 communities are involved, and it's been great.
 
-ADIANA VILLELA: Yeah. And that's what I like personally about OpenTelemetry,
-because everyone plays nice and I feel like it's a very deliberate, "No, we are
-not going to favor one vendor over another." And if a vendor tried to showboat,
-then it's pretty much shut down, which I think is great.
+**ADRIANA VILLELA**: Yeah. And that's what I like personally about
+OpenTelemetry, because everyone plays nice and I feel like it's a very
+deliberate, "No, we are not going to favor one vendor over another." And if a
+vendor tried to showboat, then it's pretty much shut down, which I think is
+great.
 
 **ALEX BOTEN:** We've just had a lot of really good folks at all the levels of
 the project trying to push everybody in the right direction, which I really
