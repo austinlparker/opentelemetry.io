@@ -29,3 +29,7 @@ assets/jsconfig.json
 
 .dart_tool
 pubspec.lock
+
+# Ignore content checkout
+scripts/release-stream/opentelemetry.io
+
