@@ -7,7 +7,7 @@ from langchain_openai import OpenAIEmbeddings
 from langchain.storage import LocalFileStore
 from langchain.embeddings import CacheBackedEmbeddings
 from langchain_community.vectorstores import Chroma
-from langchain_community.chat_models import ChatOpenAI
+from langchain_openai import ChatOpenAI
 from langchain.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnableLambda, RunnablePassthrough
@@ -35,8 +35,14 @@ class DocumentProcessor:
         for doc in self.docs:
             markdown_splitter = MarkdownHeaderTextSplitter(headers_to_split_on=self.splits)
             md_header_split = markdown_splitter.split_text(doc.page_content)
-            self.db = Chroma.from_documents(md_header_split, self.embedder)
+            try:
+                self.db = Chroma.from_documents(md_header_split, self.embedder)
+            except ValueError:
+                print(f"Error processing {doc}")
 
+docs_map = {
+    "concepts": "opentelemetry.io/content/en/docs/concepts/"
+}
 
 def get_releases(repo, count):
     """Get the last `count` releases from the repository at `url`."""
@@ -49,23 +55,22 @@ def get_releases(repo, count):
     return json.loads(release)
 
 def main(args):
-    concepts_path = "../../content/en/docs/concepts/"
-    processor = DocumentProcessor(concepts_path)
-    processor.process_documents()
+    for language in docs_map:
+        processor = DocumentProcessor(docs_map[language])
+        processor.process_documents()
     releases = get_releases(args.repo, args.num_releases)
-    print(releases['body'])
     
     retriever = processor.db.as_retriever()
-    template = """You are a content author for an open source project.
-    Your role is to write a two sentence summary from release notes,
-    making sure to highlight breaking changes. You will be given additional
+    template = """You are a technical writer for an open source project.
+    Your role is to compose a short, two sentence summary from release notes.
+    Make sure to highlight breaking changes. You will be given additional
     context to help you understand what terms in the release notes refer to.
     CONTEXT: {context}
     NOTES: {notes}
     SUMMARY:
     """
     prompt = ChatPromptTemplate.from_template(template)
-    model = ChatOpenAI(model="gpt-4-1106-preview")
+    model = ChatOpenAI(model="gpt-4-turbo-preview")
     chain = (
         {"context": retriever, "notes": RunnablePassthrough()}
         | prompt
