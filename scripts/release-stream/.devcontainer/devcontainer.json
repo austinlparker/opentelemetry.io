@@ -8,7 +8,14 @@
 		"ghcr.io/devcontainers-contrib/features/poetry:2": {},
 		"ghcr.io/warrenbuckley/codespace-features/sqlite:1": {}
 	},
-  	"postStartCommand": "bash init.sh"
+  	"postStartCommand": "bash init.sh",
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"python.defaultInterpreterPath": "poetry env info -p"
+			},
+		}
+	}
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 

@@ -14,3 +14,6 @@ git sparse-checkout init --cone
 git sparse-checkout set "$CONTENT_FILES"
 
 git checkout
+
+# Python env preparation
+poetry update
